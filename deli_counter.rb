@@ -3,8 +3,9 @@ def line(katz_deli)
   if (katz_deli.length == 0)
     puts "The line is currently empty."
   else
-    katz_deli.each_with_index { |person, index| currentLine = currentLine + "The line is currently: #{index+1}. #{person}"}
-    puts currentLine
+    current_line = "The line is currently:"
+    katz_deli.each_with_index { |person, index| current_line.push " #{(index+1)}. #{person}"
+    puts current_line
   end
 end
 
